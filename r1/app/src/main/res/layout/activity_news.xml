@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity">
+    <fragment
+        android:id="@+id/newstitlesfrag"
+        android:name="com.slq.r1.fragment.NewsTitleFrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></fragment>
+</LinearLayout>
