@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/chinokokoa"
@@ -16,27 +15,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.R1">
-
+        <activity android:name=".MyContactsListActivity"></activity>
+        <activity android:name=".MovieActivity" />
+        <activity android:name=".MusicActivity" />
         <activity android:name=".NewsContentActivity" />
         <activity android:name=".NewsActivity" />
         <activity android:name=".MainActivity3">
             <intent-filter>
                 <action android:name="android.intent.action.DIAL" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="tel" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity2">
             <intent-filter>
                 <action android:name="666.test666" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="rukou">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -48,7 +51,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/files_paths1"></meta-data>
+                android:resource="@xml/files_paths1" />
         </provider>
     </application>
 

@@ -16,19 +16,26 @@
         android:layout_height="wrap_content"
         android:text="tel`"
         android:id="@+id/tel1"></Button>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="gotonews"
-        android:id="@+id/gotonews"></Button>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="notice1"
         android:id="@+id/notice1"></Button>
-    <ListView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/testListView"></ListView>
+        android:text="gotomusic"
+        android:id="@+id/gotomusic"></Button>
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gotomovie"
+        android:id="@+id/gotomovie"></Button>
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gotoNewsActivity"
+        android:id="@+id/gotoNewsActivity"></Button>
+
 </LinearLayout>
