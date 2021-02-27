@@ -1,4 +1,4 @@
-package com.slq.r1;
+package com.slq.r1.activity;
 
 import android.Manifest;
 import android.content.ContentResolver;
@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.slq.r1.R;
 import com.slq.r1.adapter.MyArrayAdapter;
 import com.slq.r1.pojo.News;
 

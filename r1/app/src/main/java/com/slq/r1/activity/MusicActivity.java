@@ -1,21 +1,25 @@
-package com.slq.r1;
+package com.slq.r1.activity;
 
 import android.Manifest;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.slq.r1.R;
+import com.slq.r1.service.MyMusicService;
 import com.slq.r1.utils.FileUtil;
 import com.slq.r1.utils.RightUtil;
 
-import java.io.File;
 import java.io.IOException;
 
 public class MusicActivity extends AppCompatActivity implements View.OnClickListener {
@@ -23,6 +27,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
     final int FILE_SELECT_CODE = 2;
     MediaPlayer mp = new MediaPlayer();
     Uri musicUri;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

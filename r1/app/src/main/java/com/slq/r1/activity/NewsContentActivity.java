@@ -1,14 +1,13 @@
-package com.slq.r1;
+package com.slq.r1.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
+import com.slq.r1.R;
 import com.slq.r1.fragment.NewsContentFrag;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.content.Context;
-import android.view.View;
 
 public class NewsContentActivity extends AppCompatActivity {
 

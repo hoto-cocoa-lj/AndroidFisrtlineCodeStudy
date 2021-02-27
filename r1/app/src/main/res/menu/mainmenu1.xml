@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/add_item"
-        android:title="add1"
-        ></item>
-<item android:id="@+id/remove_item"
-    android:title="remove1"></item>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/backup"
+        android:icon="@android:drawable/ic_btn_speak_now"
+        android:title="backup"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/delete"
+        android:icon="@android:drawable/ic_delete"
+        android:title="delete"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/settings"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="settings"
+        app:showAsAction="never"></item>
+
+    <item
+        android:id="@+id/add_item"
+        android:title="add1"></item>
+    <item
+        android:id="@+id/remove_item"
+        android:title="remove1"></item>
 </menu>

@@ -1,12 +1,10 @@
 package com.slq.r1.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,10 +15,10 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.slq.r1.NewsContentActivity;
+import com.slq.r1.activity.NewsContentActivity;
 import com.slq.r1.R;
 import com.slq.r1.pojo.News;
-import com.slq.r1.NewsActivity;
+
 public class NewsTitleFrag extends Fragment {
     boolean side2;
 

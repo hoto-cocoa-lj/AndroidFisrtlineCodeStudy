@@ -1,24 +1,13 @@
-package com.slq.r1;
+package com.slq.r1.activity;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.provider.Settings;
 import java.io.InputStream;
 
-import androidx.core.app.NotificationCompat;
-
-import android.app.PendingIntent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.Manifest;
-import android.app.NotificationManager;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.provider.ContactsContract;
 import android.provider.MediaStore;
-import android.widget.ListView;
 import android.graphics.BitmapFactory;
 
 import androidx.annotation.NonNull;
@@ -32,38 +21,22 @@ import android.os.Build;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.net.Uri;
 
-import com.slq.r1.adapter.MyArrayAdapter;
-import com.slq.r1.pojo.News;
+import com.slq.r1.R;
 
-import android.app.Notification;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 import android.widget.ImageView;
-
-import java.io.File;
 
 public class MainActivity3 extends AppCompatActivity {
     private static final String TAG = "MainActivity3";

@@ -1,4 +1,4 @@
-package com.slq.r1;
+package com.slq.r1.activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 
+import com.slq.r1.R;
 import com.slq.r1.fragment.MyFragment1;
 import com.slq.r1.fragment.MyFragment2;
 

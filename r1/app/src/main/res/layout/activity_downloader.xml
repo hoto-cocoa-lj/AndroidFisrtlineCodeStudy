@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.DownloaderActivity">
+
+    <Button
+        android:id="@+id/binddownloadservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="binddownloadservice"></Button>
+
+    <Button
+        android:id="@+id/unbinddownloadservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="unbinddownloadservice"></Button>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f00"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/downloadurltext"></TextView>
+
+    <Button
+        android:id="@+id/startdownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="startdownload"></Button>
+
+    <Button
+        android:id="@+id/pausedownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pausedownload"></Button>
+
+    <Button
+        android:id="@+id/stopdownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stopdownload"></Button>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/downloadprogresstext"></TextView>
+
+
+</LinearLayout>

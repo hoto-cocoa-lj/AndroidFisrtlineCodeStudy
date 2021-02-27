@@ -1,42 +1,33 @@
-package com.slq.r1;
+package com.slq.r1.activity;
 
 
-import android.Manifest;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
 
-import com.slq.r1.adapter.MyArrayAdapter;
-import com.slq.r1.pojo.News;
+import com.slq.r1.R;
+import com.slq.r1.service.MyService1;
 
 import java.io.File;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -45,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);     //<----------------modify here
         Button goa2 = (Button) findViewById(R.id.goa2);
         goa2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +114,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MusicActivity.class));
             }
         });
+        Button gotomusicwithservice = findViewById(R.id.gotomusicwithservice);
+        gotomusicwithservice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MusicWithServiceActivity.class));
+            }
+        });
+
         Button gotomovie = findViewById(R.id.gotomovie);
         gotomovie.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +137,54 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button gotoOkhttpActivity = (Button) findViewById(R.id.okhttpActivity);
+        gotoOkhttpActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, OkhttpActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button asynctaskActivity = (Button) findViewById(R.id.asynctaskActivity);
+        asynctaskActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AsyncTaskDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button myService1Activity = (Button) findViewById(R.id.myService1Activity);
+        myService1Activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyService1Activity.class);
+                startActivity(intent);
+            }
+        });
+        Button downloaderActivity = (Button) findViewById(R.id.downloaderActivity);
+        downloaderActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DownloaderActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button toolbarActivity = (Button) findViewById(R.id.toolbarActivity);
+        toolbarActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ToolbarActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button downloaderActivityWithHandler = (Button) findViewById(R.id.downloaderActivityWithHandler);
+        downloaderActivityWithHandler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DownloaderActivityWithHandler.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

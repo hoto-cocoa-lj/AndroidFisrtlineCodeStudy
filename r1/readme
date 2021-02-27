@@ -3,8 +3,27 @@
     fragment
     窄屏和宽屏的自适应显示
     发送通知Notification
+        setNotificationSilent可关闭声音
     权限申请和返回值处理
     调用相机和相册
     普通/有序/本地广播
-    音乐播放
+    音乐播放,视频播放
     文件选择
+    asynctask
+        作用：和handlermessage/runonuithread类似，子线程操作UI的另一种实现
+    okhttp3
+    service
+        startService和bindService绑定同一个service类，会绑定同一个service对象。
+        如果想销毁此service，需要stopService和unbindService。
+    JobIntentService
+        IntentService已经过时，使用JobIntentService代替，作用是：
+            1，自动开启子线程执行onHandleWork方法
+            2，执行完后自动销毁该service，不用手动stopSelf/stopService
+        service内部需要配置android:permission="android.permission.BIND_JOB_SERVICE"
+    使用service+AsyncTask+Okhttp下载文件，并用notification显示下载进度
+
+    activity和service间通过handler和Messenger通信：
+        见DownloaderActivityWithHandler和DownloaderService2
+        子线程继承runnable和callable都可以运行，但如果主线程等待callable的返回值会阻塞主线程
+
+
