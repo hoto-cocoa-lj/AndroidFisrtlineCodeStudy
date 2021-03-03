@@ -73,8 +73,15 @@ public class WeatherInfoActivity extends AppCompatActivity {
     }
 
     public void fix(String name) {
-        setName(name);
-        initTextView();
-        myDrawerLayout1.closeDrawer(Gravity.START);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                setName(name);
+                initTextView();
+                //mySwipeRefreshLayout1.setRefreshing(false);
+                myDrawerLayout1.closeDrawer(Gravity.START);
+            }
+        });
+
     }
 }
