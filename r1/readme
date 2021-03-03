@@ -1,6 +1,7 @@
 学习了以下知识点：
     recylerview
     fragment
+        见MainActivity2，包含<FrameLayout/>+replace和<fragment/>两种用法
     窄屏和宽屏的自适应显示
     发送通知Notification
         setNotificationSilent可关闭声音
@@ -15,6 +16,7 @@
     service
         startService和bindService绑定同一个service类，会绑定同一个service对象。
         如果想销毁此service，需要stopService和unbindService。
+
     JobIntentService
         IntentService已经过时，使用JobIntentService代替，作用是：
             1，自动开启子线程执行onHandleWork方法
@@ -26,4 +28,54 @@
         见DownloaderActivityWithHandler和DownloaderService2
         子线程继承runnable和callable都可以运行，但如果主线程等待callable的返回值会阻塞主线程
 
+    设置ActionBar：
+        1，把AndroidManifest.xml的theme的第一个style的parent改成NoActionBar
+        2，自己创建一个toolbar的样式，如mybar.xml
+        3，从mybar.xml获取toolbar的view，加入activity，并setSupportActionBar(toolbar)。详情见MaterialActivity1
+    注意mybar.xml里，toolbar外如果还有一层，getToolBar2会把此层也加入，getToolBar3会报错已经有parent。
+    关于Toolbar的样式：
+        android:background="?attr/colorPrimary"
+            background把背景设为紫色
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            通过设置theme为dark把字体设为白色
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            menu字体默认白色，和背景一样，看不见文字，通过设置menu的theme为light把字体设为黑色
 
+    官方滑动菜单DrawerLayout
+        DrawerLayout里，左侧抽屉必须放主页面下面，否则点击事件失效。
+    官方菜单栏NavigationView
+    悬浮按钮FloatActionButton
+    Toast升级版Snackbar，能加按钮
+    FrameLayout升级版CoordinatorLayout，弹出对话框时会自动不覆盖原来的组件
+        CoordinatorLayout可以监听所有子组件的事件
+            Snackbar.make的一个参数指定snackbar基于哪个view触发，代码里传入FloatActionButton，
+            它是CoordinatorLayout的子组件，所以事件被监听到。
+    CardView进行多列的卡片列表布局
+    AppBarLayout
+        RecyclerView会遮挡actionBar或被actionBar遮挡时，
+            1，把actionBar放AppBarLayout里，
+            2，给RecyclerView设置app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            RecyclerView会和actionBar自动隔开。
+        toolbar设置app:layout_scrollFlags="scroll|enterAlways|snap"会影响RecyclerView滑动时toolbar的行为
+            scroll      上划时隐藏actionBar
+            enterAlways 下划时出现(滑动RecyclerView时先滑动toolbar再滑动RecyclerView)
+            snap        toolbar显示不完全时，自动决定显示还是隐藏
+    官方的下拉刷新组件SwipeRefreshLayout
+        1，把RecyclerView放进去(RecyclerView的app:layout_behavior放到SwipeRefreshLayout下)
+    CollapsingToolbarLayout
+        划动时标题栏动态改变，本项目没有写。
+        应该可以用来实现bilibili视频暂停时，上下划动评论视频组件会改变的效果。
+
+    Glide对图像进行处理，如自动压缩图片进行展示
+
+    在任意地方都可以获取context的方法
+        1，实现Application，onCreate里getApplicationContext，并通过静态方法返回context
+        2，Manifest的application里设置android:name
+
+    intent传对象：
+        对象实现Serializable，传对象用putExtra，接收对象用getSerializableExtra
+
+    定时任务Alarm：参考AlarmService
+
+    client.newCall(request).execute()，非异步方式，会阻塞线程，等待返回结果。
+    client.newCall(request).enqueue(Callback)，异步方式。

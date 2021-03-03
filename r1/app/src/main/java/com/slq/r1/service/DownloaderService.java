@@ -7,15 +7,13 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.IBinder;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 
-import com.slq.r1.DownloaderListener;
+import com.slq.r1.interfaces.DownloaderListener;
 import com.slq.r1.R;
 import com.slq.r1.activity.DownloaderActivity;
 import com.slq.r1.utils.DownloaderTask;

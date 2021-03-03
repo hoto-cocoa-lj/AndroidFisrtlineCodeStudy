@@ -4,81 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-    <Button
-        android:id="@+id/goa2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="go a2"></Button>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/tel1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="tel`"></Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/notice1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="notice1"></Button>
+            <Button
+                android:id="@+id/goa2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="go a2"></Button>
 
-    <Button
-        android:id="@+id/gotomusic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="gotomusic"></Button>
-    <Button
-        android:id="@+id/gotomusicwithservice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="gotomusicwithservice"></Button>
+            <Button
+                android:id="@+id/tel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tel`"></Button>
 
-    <Button
-        android:id="@+id/gotomovie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="gotomovie"></Button>
+            <Button
+                android:id="@+id/notice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="notice1"></Button>
 
-    <Button
-        android:id="@+id/gotoNewsActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="gotoNewsActivity"></Button>
+            <Button
+                android:id="@+id/gotomusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="gotomusic"></Button>
 
-    <Button
-        android:id="@+id/okhttpActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="okhttpActivity"></Button>
+            <Button
+                android:id="@+id/gotomusicwithservice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="gotomusicwithservice"></Button>
 
-    <Button
-        android:id="@+id/asynctaskActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="asynctaskActivity"></Button>
+            <Button
+                android:id="@+id/gotomovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="gotomovie"></Button>
 
-    <Button
-        android:id="@+id/myService1Activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="myService1Activity"></Button>
-    <Button
-        android:id="@+id/downloaderActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="downloaderActivity"></Button>
-    <Button
-        android:id="@+id/downloaderActivityWithHandler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="downloaderActivityWithHandler"></Button>
-    <Button
-        android:id="@+id/toolbarActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="toolbarActivity"></Button>
+            <Button
+                android:id="@+id/gotoNewsActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="gotoNewsActivity"></Button>
 
+            <Button
+                android:id="@+id/okhttpActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="okhttpActivity"></Button>
+
+            <Button
+                android:id="@+id/asynctaskActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="asynctaskActivity"></Button>
+
+            <Button
+                android:id="@+id/myService1Activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="myService1Activity"></Button>
+
+            <Button
+                android:id="@+id/downloaderActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="downloaderActivity"></Button>
+
+            <Button
+                android:id="@+id/downloaderActivityWithHandler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="downloaderActivityWithHandler"></Button>
+
+            <Button
+                android:id="@+id/materialactivity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="materialactivity1"></Button>
+
+            <Button
+                android:id="@+id/navigationactivity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="navigationactivity1"></Button>
+            <Button
+                android:id="@+id/weatherActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="weatherActivity"></Button>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

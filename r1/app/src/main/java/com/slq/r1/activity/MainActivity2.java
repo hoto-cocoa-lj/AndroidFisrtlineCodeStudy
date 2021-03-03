@@ -35,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
                 FragmentTransaction t = sfm.beginTransaction();
                 List<Fragment> fragments = sfm.getFragments();
                 int f=R.id.myf1;
-                t.addToBackStack("");
+                t.addToBackStack("");           //点后退时不退出activity，返回上一个fragment
                 if (fragments.size()>0 && fragments.get(fragments.size()-1) instanceof MyFragment1) {
                     t.replace(f, new MyFragment2());
                 } else {

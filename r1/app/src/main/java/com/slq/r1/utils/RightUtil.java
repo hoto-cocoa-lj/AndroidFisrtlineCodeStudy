@@ -10,12 +10,14 @@ import androidx.core.content.ContextCompat;
 
 public class RightUtil {
     public static boolean hasRightElseRequest(Context context, String[] rights, int requestCode) {
-        int i = ContextCompat.checkSelfPermission(context, rights[0]);
-        if (i != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions((Activity)context, rights, requestCode);
-            return false;
-        } else {
-            return true;
+        boolean b=true;
+        for(int j=0;j<rights.length;j++){
+            int i = ContextCompat.checkSelfPermission(context, rights[j]);
+            if (i != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions((Activity)context, rights, requestCode);
+                b=false;
+            }
         }
+        return b;
     }
 }

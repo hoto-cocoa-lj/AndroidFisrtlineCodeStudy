@@ -25,6 +25,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
 import com.slq.r1.R;
+import com.slq.r1.app.MyApplication;
+import com.slq.r1.pojo.Fruit;
 import com.slq.r1.service.MyService1;
 
 import java.io.File;
@@ -169,14 +171,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button toolbarActivity = (Button) findViewById(R.id.toolbarActivity);
-        toolbarActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ToolbarActivity.class);
-                startActivity(intent);
-            }
-        });
+
         Button downloaderActivityWithHandler = (Button) findViewById(R.id.downloaderActivityWithHandler);
         downloaderActivityWithHandler.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,8 +180,42 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button materialactivity1 = (Button) findViewById(R.id.materialactivity1);
+        materialactivity1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MaterialActivity1.class);
+                startActivity(intent);
+            }
+        });
+
+        Button navigationactivity1 = (Button) findViewById(R.id.navigationactivity1);
+        navigationactivity1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyApplication.getContext(), NavigationActivity1.class);
+                intent.putExtra("fruit",new Fruit(1,"apple"));
+                startActivity(intent);
+            }
+        });
+        Button weatherActivity = (Button) findViewById(R.id.weatherActivity);
+        weatherActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeatherActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
+    /**
+     * @see R.layout.activity_main
+     * {@link R.layout.activity_main}
+     * @see com.slq.r1.activity.MainActivity#onCreateOptionsMenu(Menu)
+     * 前面不可以写东西，否则无法跳转   @see #onCreateOptionsMenu(Menu)
+     * 前面可以写东西  {@link #onCreateOptionsMenu(Menu)}
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         Log.e(TAG, "onActivityResult: " + requestCode + ":" + resultCode + ":" + data.getStringExtra("re"));
@@ -208,6 +237,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.remove_item:
                 Toast.makeText(this, "DEL IT", Toast.LENGTH_SHORT).show();
                 finish();
+                break;
+            case R.id.settings:
+                Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.delete:
+                Toast.makeText(this, "delete IT", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.backup:
+                Toast.makeText(this, "backup IT", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

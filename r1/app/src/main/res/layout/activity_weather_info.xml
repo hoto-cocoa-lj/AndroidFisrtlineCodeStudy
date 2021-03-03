@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/weatherInfoDrawerLayout1"
+    android:layout_height="match_parent"
+    tools:context=".activity.WeatherInfoActivity">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/mySwipeRefreshLayoutLeftSide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/weather_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:textSize="30sp"></TextView>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+        <fragment
+            android:name="com.slq.r1.fragment.WeatherFragment"
+            android:layout_width="match_parent"
+            android:id="@+id/weatherFragmentLeftSide"
+            android:layout_height="match_parent"></fragment>
+    </LinearLayout>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

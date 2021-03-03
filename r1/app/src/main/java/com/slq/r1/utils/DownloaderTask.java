@@ -2,15 +2,22 @@ package com.slq.r1.utils;
 
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.Toast;
 
-import com.slq.r1.DownloaderListener;
+import com.slq.r1.app.MyApplication;
+import com.slq.r1.interfaces.DownloaderListener;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.RandomAccessFile;
 
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -83,7 +90,7 @@ public class DownloaderTask extends AsyncTask<String, Long, Integer> {
         String filename = url.substring(url.lastIndexOf("/") + 1);
         InputStream is = null;
         RandomAccessFile rw = null;
-        Response response = null;
+        final Response response = null;
         try {
             file = new File(directory, filename);
             Log.e(TAG, "download path:" + directory + "/" + filename);
@@ -93,7 +100,21 @@ public class DownloaderTask extends AsyncTask<String, Long, Integer> {
             Request request = new Request.Builder()
                     .addHeader("range", "bytes=" + current + "-")
                     .url(url).build();
-            response = client.newCall(request).execute();
+            client.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(@NotNull Call call, @NotNull IOException e) {
+
+                }
+
+                @Override
+                public void onResponse(@NotNull Call call, @NotNull Response response1) throws IOException {
+                    String text1="我就试试enqueue怎么用";
+                    Looper.prepare();
+                    Toast.makeText(MyApplication.getContext(),text1,Toast.LENGTH_SHORT).show();
+                    Looper.loop();
+                }
+            });
+            //response = client.newCall(request).execute();
             if (response != null) {
                 long fileSize = response.body().contentLength() + current;
                 if (current == fileSize) {

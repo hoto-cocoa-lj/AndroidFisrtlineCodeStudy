@@ -1,4 +1,4 @@
-package com.slq.r1;
+package com.slq.r1.interfaces;
 
 public interface DownloaderListener {
     public void onSucess();

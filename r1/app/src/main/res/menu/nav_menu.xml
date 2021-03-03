@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu1"
+            android:icon="@android:drawable/ic_dialog_alert"
+            android:title="nav_menu1"></item>
+        <item
+            android:id="@+id/nav_menu2"
+            android:icon="@android:drawable/ic_menu_zoom"
+            android:title="nav_menu2"></item>
+        <item
+            android:id="@+id/nav_menu3"
+            android:icon="@android:drawable/ic_btn_speak_now"
+            android:title="nav_menu3"></item>
+        <item
+            android:id="@+id/nav_menu4"
+            android:icon="@android:drawable/ic_delete"
+            android:title="nav_menu4"></item>
+        <item
+            android:id="@+id/nav_menu5"
+            android:icon="@android:drawable/alert_dark_frame"
+            android:title="nav_menu5"></item>
+    </group>
+</menu>
